@@ -12,7 +12,11 @@
 @implementation SampleClass
 
 -(void) name {
-    NSLog(@"It Works ");
+    NSString *admin;
+    
+    admin = @"Hans";
+    
+    NSLog(@"It Works %@", admin);
 }
 
 @end
