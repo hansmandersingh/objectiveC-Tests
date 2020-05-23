@@ -16,11 +16,14 @@
     NSString *name;
     NSString *selectedLang;
     int myGrade;
+    int factorial;
+    
+    factorial = 12;
     
     name = @"Hans";
     admin = name;
     selectedLang = @"punjabi";
-    myGrade = 63;
+    myGrade = 2;
     
     if ([selectedLang isEqualTo: @"punjabi"]) {
         NSLog(@"%@ Kive Salya.", admin);
@@ -45,6 +48,23 @@
     } else if (myGrade < 100) {
       NSLog(@"Your letter grade is A+");
     }
+    
+    if (myGrade % 2 == 1) {
+      NSLog(@"Your grade is odd");
+    } else {
+      NSLog(@"Your grade is even");
+    }
+    
+//    while (myGrade != 9) {
+//        NSLog(@"The value of the grade is %d", myGrade);
+//        myGrade = myGrade + 1;
+//    }
+    
+    for (int x = 1; x <= factorial ; x++) {
+        factorial = x * factorial;
+    }
+    
+    NSLog(@"The factorial is %d", factorial);
     
     //NSLog(@"The admin is %@", admin);
 }
