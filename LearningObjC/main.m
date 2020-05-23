@@ -16,16 +16,30 @@
     
     admin = @"Hans";
     
-    NSLog(@"It Works %@", admin);
+    NSLog(@"The admin is %@", admin);
+}
+
+-(int) adminAge {
+    int age;
+    
+    age = 21;
+    
+    return age;
 }
 
 @end
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
+        int adminAge;
         SampleClass *sampleClass = [[SampleClass alloc] init];
         
         [sampleClass name];
+        
+        adminAge = [sampleClass adminAge];
+        
+        NSLog(@"And admin's age is %d", adminAge);
+        
     }
     return 0;
 }

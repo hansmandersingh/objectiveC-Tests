@@ -14,6 +14,8 @@
 
 -(void) name;
 
+-(int) adminAge;
+
 @end
 
 #endif /* Header_h */
