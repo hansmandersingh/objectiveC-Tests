@@ -79,16 +79,38 @@
 
 @end
 
+@implementation Song
+
+-(void) oneBottleDown {
+    for (int bottles = 99; bottles >= 1; bottles--) {
+      if (bottles % 3 != 0) {
+        if (bottles == 2) {
+          NSLog(@"%d bottles of beer on the wall! %d bottles of beer! Take one down, pass it around...%d bottle of beer on the wall!", bottles , bottles , bottles - 1);
+        } else if (bottles == 1) {
+          NSLog(@"%d bottle of beer on the wall! %d bottle of beer! Take one down, pass it around...%d bottles of beer on the wall!", bottles , bottles , bottles - 1);
+        } else {
+          NSLog(@"%d bottles of beer on the wall! %d bottles of beer! Take one down, pass it around...%d bottles of beer on the wall!", bottles , bottles , bottles - 1);
+        }
+      }
+    }
+}
+
+@end
+
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        int adminAge;
-        SampleClass *sampleClass = [[SampleClass alloc] init];
+        //int adminAge;
+//        SampleClass *sampleClass = [[SampleClass alloc] init];
+//
+//        [sampleClass name];
+//
+//        adminAge = [sampleClass adminAge];
+//
+//        NSLog(@"And admin's age is %d", adminAge);
         
-        [sampleClass name];
+        Song *song = [[Song alloc] init];
         
-        adminAge = [sampleClass adminAge];
-        
-        NSLog(@"And admin's age is %d", adminAge);
+        [song oneBottleDown];
         
     }
     return 0;

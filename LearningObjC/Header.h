@@ -18,4 +18,10 @@
 
 @end
 
+@interface Song : NSObject
+
+-(void) oneBottleDown;
+
+@end
+
 #endif /* Header_h */
