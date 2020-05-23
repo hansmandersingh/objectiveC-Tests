@@ -15,10 +15,12 @@
     NSString *admin;
     NSString *name;
     NSString *selectedLang;
+    int myGrade;
     
     name = @"Hans";
     admin = name;
     selectedLang = @"punjabi";
+    myGrade = 63;
     
     if ([selectedLang isEqualTo: @"punjabi"]) {
         NSLog(@"%@ Kive Salya.", admin);
@@ -28,6 +30,20 @@
         NSLog(@"Bonjour Monde");
     }else {
         NSLog(@"Hello World");
+    }
+    
+    if (myGrade < 50) {
+        NSLog(@"Your letter grade is F");
+    } else if (myGrade < 60) {
+        NSLog(@"Your letter grade is D");
+    } else if (myGrade < 70) {
+        NSLog(@"Your letter grade is C");
+    } else if (myGrade < 80) {
+      NSLog(@"Your letter grade is B");
+    } else if (myGrade < 90) {
+      NSLog(@"Your letter grade is A");
+    } else if (myGrade < 100) {
+      NSLog(@"Your letter grade is A+");
     }
     
     //NSLog(@"The admin is %@", admin);
