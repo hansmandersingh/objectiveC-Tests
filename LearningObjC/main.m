@@ -7,11 +7,21 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Header.h"
+
+@implementation SampleClass
+
+-(void) name {
+    NSLog(@"It Works ");
+}
+
+@end
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        // insert code here...
-        NSLog(@"Hello, World!");
+        SampleClass *sampleClass = [[SampleClass alloc] init];
+        
+        [sampleClass name];
     }
     return 0;
 }
