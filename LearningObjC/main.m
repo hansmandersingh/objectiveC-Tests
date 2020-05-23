@@ -13,10 +13,24 @@
 
 -(void) name {
     NSString *admin;
+    NSString *name;
+    NSString *selectedLang;
     
-    admin = @"Hans";
+    name = @"Hans";
+    admin = name;
+    selectedLang = @"punjabi";
     
-    NSLog(@"The admin is %@", admin);
+    if ([selectedLang isEqualTo: @"punjabi"]) {
+        NSLog(@"%@ Kive Salya.", admin);
+    } else if ([selectedLang isEqualTo: @"spanish"]) {
+        NSLog(@"Hola Mundo");
+    } else if ([selectedLang isEqual: @"french"]) {
+        NSLog(@"Bonjour Monde");
+    }else {
+        NSLog(@"Hello World");
+    }
+    
+    //NSLog(@"The admin is %@", admin);
 }
 
 -(int) adminAge {
