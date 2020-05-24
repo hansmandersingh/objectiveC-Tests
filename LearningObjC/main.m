@@ -15,11 +15,11 @@
     NSString *admin;
     NSString *name;
     NSString *selectedLang;
+    
     int myGrade;
     int factorial;
     
     factorial = 12;
-    
     name = @"Hans";
     admin = name;
     selectedLang = @"punjabi";
@@ -130,7 +130,12 @@
 -(NSMutableString *) newLine: (int) length {
     NSMutableString *line = [NSMutableString string];
     for (int j = 1; j <= length; j++) {
-        [line appendFormat: @"* "];
+        if (j == 1) {
+            [line appendFormat: @"\n* "];
+        } else {
+            [line appendFormat: @"* "];
+        }
+        
     }
     return line;
 }
@@ -150,7 +155,7 @@
     for (int x = 1; x <= height; x++) {
         line = [makeLine newLine: x];
         
-        [triangle appendFormat: @"%@\n",line];
+        [triangle appendFormat: @"%@",line];
     }
     
     NSLog(@"%@", triangle);
