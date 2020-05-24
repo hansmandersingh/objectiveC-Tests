@@ -97,8 +97,72 @@
 
 @end
 
+@implementation Numbers
+
+-(void) numberPrint {
+    NSMutableString *result = [NSMutableString string];
+    for (int i = 0; i < 10; i++) {
+        [result appendFormat:@"Getal: %d\n", i];
+    }
+    
+    NSLog(@"The result is %@", result);
+}
+
+@end
+
+@implementation Joke
+
+-(void) newJoke:(int)length {
+    NSMutableString *result = [NSMutableString string];
+    NSString *laugh = @"he";
+    
+    for (int x = 0; x < length; x++) {
+        [result appendFormat:@"%@",laugh];
+    }
+    
+    NSLog(@"%@", result);
+}
+
+@end
+
+@implementation MakeLine
+
+-(NSMutableString *) newLine: (int) length {
+    NSMutableString *line = [NSMutableString string];
+    for (int j = 1; j <= length; j++) {
+        [line appendFormat: @"* "];
+    }
+    return line;
+}
+
+@end
+
+@implementation BuildTriangle
+
+-(void) newTriangle: (int) height {
+    NSMutableString *line = [NSMutableString string];
+    NSMutableString *triangle = [NSMutableString string];
+    
+    MakeLine *makeLine = [[MakeLine alloc] init];
+    
+    
+    
+    for (int x = 1; x <= height; x++) {
+        line = [makeLine newLine: x];
+        
+        [triangle appendFormat: @"%@\n",line];
+    }
+    
+    NSLog(@"%@", triangle);
+}
+
+@end
+
+
+
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
+
         //int adminAge;
 //        SampleClass *sampleClass = [[SampleClass alloc] init];
 //
@@ -108,10 +172,21 @@ int main(int argc, const char * argv[]) {
 //
 //        NSLog(@"And admin's age is %d", adminAge);
         
-        Song *song = [[Song alloc] init];
+//        Song *song = [[Song alloc] init];
+//
+//        [song oneBottleDown];
         
-        [song oneBottleDown];
+//        Numbers *numbers = [[Numbers alloc] init];
+//
+//        [numbers numberPrint];
         
+//        Joke *joke = [[Joke alloc] init];
+//        
+//        [joke newJoke: 3];
+        
+        BuildTriangle *buildTriangle = [[BuildTriangle alloc]init];
+        
+        [buildTriangle newTriangle: 10];
     }
     return 0;
 }

@@ -24,4 +24,28 @@
 
 @end
 
+@interface Numbers : NSObject
+
+-(void) numberPrint;
+
+@end
+
+@interface Joke : NSObject
+
+-(void) newJoke: (int)length;
+
+@end
+
+@interface MakeLine : NSObject
+
+-(NSMutableString *) newLine: (int) length;
+
+@end
+
+@interface BuildTriangle : NSObject
+
+-(void) newTriangle: (int) height;
+
+@end
+
 #endif /* Header_h */
