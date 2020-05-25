@@ -48,4 +48,10 @@
 
 @end
 
+@interface ArrayPrint : NSObject
+
+-(void) arrayout;
+
+@end
+
 #endif /* Header_h */

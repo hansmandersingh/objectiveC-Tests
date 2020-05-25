@@ -163,6 +163,34 @@
 
 @end
 
+@implementation ArrayPrint
+
+-(void) arrayout {
+    NSString *captain = @"Picard";
+    NSString *commander = @"Will";
+    NSString *ensign = @"Wesley";
+    NSString *android = @"Data";
+    NSString *security = @"Worf";
+    NSString *engineering = @"Geordi";
+    
+    NSString *allOfficers[6] = {
+        captain,
+        commander,
+        ensign,
+        android,
+        security,
+        engineering
+    };
+    
+    int sz = (sizeof allOfficers) / (sizeof allOfficers[0]);
+    
+    for (int x = 0; x < sz; x ++) {
+        NSLog(@"%@", allOfficers[x]);
+    }
+}
+
+@end
+
 
 
 int main(int argc, const char * argv[]) {
@@ -189,9 +217,13 @@ int main(int argc, const char * argv[]) {
 //        
 //        [joke newJoke: 3];
         
-        BuildTriangle *buildTriangle = [[BuildTriangle alloc]init];
+//        BuildTriangle *buildTriangle = [[BuildTriangle alloc]init];
+//
+//        [buildTriangle newTriangle: 10];
         
-        [buildTriangle newTriangle: 10];
+        ArrayPrint *arrayPrint = [[ArrayPrint alloc] init];
+        
+        [arrayPrint arrayout];
     }
     return 0;
 }
